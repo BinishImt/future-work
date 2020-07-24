@@ -1,0 +1,15 @@
+numpy
+pandas
+matplotlib
+seaborn
+nltk
+sklearn
+tweepy
+textblob
+Keras
+Statsmodels
+Gensim
+opencv-python
+beautifulsoup4
+pickle
+wordcloud
