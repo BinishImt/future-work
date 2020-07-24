@@ -31,7 +31,3 @@ Let’s see how our model performs on the DNA sequences from other species. Firs
 <img src= "Images/Dog_sequence_output.png">
 
 The model seems to produce good results on human data. It also does on Chimpanzee which is because the Chimpanzee and humans share the same genetic hierarchy. The performance on the dog is not quite as good which is because the dog is more diverging from humans than the chimpanzee.
-
-## Blog
-
-Please read this medium blog for more information - https://medium.com/analytics-vidhya/demystify-dna-sequencing-with-machine-learning-and-python-bdbaeb177f56
