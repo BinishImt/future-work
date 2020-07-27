@@ -1,26 +1,27 @@
 #Loan Default Prediction
 
 import dltk_ai
+from dltk_ai.dataset_types import Dataset
 
 #DLTK SDK requires Python 3.5 + . Go to https://dev.dltk.ai/ and create an app. On creation of an app, you will get an API Key.
 c = dltk_ai.DltkAiClient('API Key')
 
-#As Studio is a cloud platform, It stores Train and Test Files remotely. File upload API will return file storage locations from Cloud Storage in response.
-train_file_store_response = c.store("path/to/train/file")
+#It stores Train and Test Files remotely. File upload API will return file storage locations from Cloud Storage in response.
+train_file_store_response = c.store("path/to/train/file",Dataset.TRAIN_DATA)
 train_data = train_file_store_response["fileUrl"]
  
 #train_data file url
 #'/spotflock-studio-prod/xxxxx@xxxxxxxx.com/1551936734455-loan_train.csv'
 #Upload Test File
-test_file_store_response = c.store("path/to/test/file")
+test_file_store_response = c.store("path/to/test/file", Dataset.TEST_DATA)
 test_data = test_file_store_response["fileUrl"]
 
 #test_data file url
 #'/spotflock-studio-prod/xxxxx@xxxxxxx.com/1551936725437-loan_test.csv'
 
 #build model using NaiveBayesMultinomial algorithm.
-train_response_NBM = c.train("classification", "NaiveBayesMultinomial", train_data, "Loan_Status",
-["CurrentLoanAmount","CreditScore","MonthlyDebt”,"Yr_Credit_His"],
+train_response_NBM = c.train("classification", "NaiveBayesMultinomial", train_data, "Loan_Status", 
+["CurrentLoanAmount","CreditScore","MonthlyDebt","Yr_Credit_His"],
 "Loan Model - NaiveBayesMultinomial","weka", 80, True)
 
 #The train/predict jobs take some amount of time to be completed and so their status can be checked with this API.
