@@ -1,7 +1,10 @@
 # Open-contribution
-The repository contains some Machine Learning and Deep Learning use cases from various industries. The use cases are in development phase and open for any contribution. If you are thinking of applying your AI and data science skills on some real time projects then this repository is for you. We would love to hear your ideas, thoughts and enchancements on any of the mentioned use cases.
+The repository contains list of Machine Learning and Deep Learning use cases from various industries and domains. The use cases are in development phase and open for any contribution. 
 
-## Steps to follow while contributing:
+## Motivation
+If you are thinking of applying your Machine Learning skills to solve some real time projects then this repository is for you. We would love to hear your ideas, thoughts, suggestions and enchancements on any of the mentioned use cases. So what are you waiting for, just fork and start playing around.
+
+## Steps to follow while contributing
 Please refer to each project's readme to get an understanding of what needs to be done and what has already been done. In general, we follow the "fork-and-pull" Git workflow.
 
 1. Fork the repo on GitHub
